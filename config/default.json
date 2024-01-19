@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://kamya123:kamya123@atlascluster.corunzw.mongodb.net/",
+    "jwtSecret":"secret"
+}
