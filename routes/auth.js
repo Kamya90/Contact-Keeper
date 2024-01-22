@@ -25,8 +25,8 @@ router.get('/', auth,async (req,res) =>{
 // @desc auth user & get token
 // @access public
 router.post('/',[
-    check('email','please bro include a valid email').isEmail(),
-    check('password','password bro???').exists()
+    check('email','please include a valid email').isEmail(),
+    check('password','please entrer a password???').exists()
 ], 
 async (req,res) =>{
     const errors=validationResult(req);
