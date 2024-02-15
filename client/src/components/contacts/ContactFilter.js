@@ -1,23 +1,27 @@
 import React, { useContext, useRef , useEffect} from 'react'
-import ContactContext from '../../context/contact/contactContext'
+import ContactContext from '../../context/contact/contactContext';
+
 
 const ContactFilter = () => {
     const contactContext=useContext(ContactContext);
-    const text=useRef('');
-    const {filterContacts, clearFilter, filtered}= ContactContext;
+    const text=useRef(null);
+    const {filterContacts, clearFilter, filtered}= contactContext;
 
     useEffect (() =>{
         if(filtered ===null){
-            text.current.valueOf='';
+            text.current.value='';
         }
+       
     });
 
     const onChange=e=>{
-        if(text.current.valueOf !==''){
-            contactContext.filterContacts(e.target.value);
+      // text.current.valueOf = "adfsdgvsdfvsfvdfv"
+      console.log(text)
+        if(e.target.value !==''){
+            filterContacts(e.target.value);
         }
         else{
-            contactContext.clearFilter();
+            clearFilter();
         }
 
     }
@@ -28,4 +32,4 @@ const ContactFilter = () => {
   )
 }
 
-export default ContactFilter
+export default ContactFilter;

@@ -59,8 +59,7 @@ import {
         return {
           ...state,
           filtered: state.contacts.filter(contact  => {
-            const regex = new RegExp(`$(action.payload)`, 'gi');
-            return contact.name.match(regex)|| contact.email.match(regex);
+            return contact.name.includes(action.payload) || contact.email.includes(action.payload);
           })
         };
       case CLEAR_FILTER:
