@@ -28,11 +28,11 @@ const Register = () => {
         e.preventDefault();
         if(name=== '' || email === '' || password==='' ){
             setAlert('Please enter all fields', 'danger');
-            console.log('checkpoint1');
+            
         }
         else if(password !== password2){
             setAlert('Passwords do not match', 'danger');
-            console.log('checkpoint2');
+            
         }
         else{
             register({
@@ -40,7 +40,7 @@ const Register = () => {
                 email,
                 password
             })
-            console.log('checkpoint3');
+           
         }
         
     }
