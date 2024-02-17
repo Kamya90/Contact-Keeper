@@ -15,7 +15,7 @@ const ContactFilter = () => {
     });
 
     const onChange=e=>{
-      // text.current.valueOf = "adfsdgvsdfvsfvdfv"
+     
       console.log(text)
         if(e.target.value !==''){
             filterContacts(e.target.value);
